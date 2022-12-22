@@ -1,0 +1,28 @@
+---
+- name: Create SQS queue Using Ansible
+  hosts: localhost
+  gather_facts: true
+
+  tasks:
+    - name: Create SQS Queue
+      sqs_queue:
+        name: sqsqueuenew
+        region: region1
+        aws_access_key: AKIA43FCT556UDAZXTVT
+        aws_secret_key: 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
+        default_visibility_timeout: dvt
+        message_retention_period: mrp
+        maximum_message_size: mms
+        delivery_delay: dd
+        receive_message_wait_time: rmwt
+        policy:
+          Version: 2012-10-17
+          Id: sqs-queue-policy
+          Statement:
+            - Sid: allownotifications
+              Effect: Allow
+              Principal:
+                Service: sqs.amazonaws.com
+              Action:
+                - SQS:SendMessage
+          Resource: arn:aws:sqs:882956824445:Mysqsqueue
