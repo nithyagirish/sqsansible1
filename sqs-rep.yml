@@ -7,10 +7,10 @@
     - name: Create SQS Queue
       sqs_queue:
         name: sqsqueuenew
-        region: us-east-2
+        region: region1
         aws_access_key: AKIA43FCT556UDAZXTVT
         aws_secret_key: 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
-        default_visibility_timeout: 120
+        default_visibility_timeout: dvt
         message_retention_period: mrp
         maximum_message_size: mms
         delivery_delay: dd
