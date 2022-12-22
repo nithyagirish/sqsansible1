@@ -15,14 +15,3 @@
         maximum_message_size: mms
         delivery_delay: dd
         receive_message_wait_time: rmwt
-        policy:
-          Version: 2012-10-17
-          Id: sqs-queue-policy
-          Statement:
-            - Sid: allownotifications
-              Effect: Allow
-              Principal:
-                Service: sqs.amazonaws.com
-              Action:
-                - SQS:SendMessage
-          Resource: arn:aws:sqs:882956824445:Mysqsqueue
