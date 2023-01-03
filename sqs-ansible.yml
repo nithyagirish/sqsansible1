@@ -8,8 +8,6 @@
       sqs_queue:
         name: sqsqueuenew
         region: us-west-1
-        aws_access_key: AKIA43FCT556UDAZXTVT
-        aws_secret_key: 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
         default_visibility_timeout: 120
         message_retention_period: 86400
         maximum_message_size: 1024
